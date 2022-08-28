@@ -1,9 +1,7 @@
-# Code from a
-
 import numpy as np
 
 
-def get_2D_intersect(a1, a2, b1, b2):
+def get_2d_intersect(a1, a2, b1, b2):
     """
     Returns the point of intersection of the lines passing through a2,a1 and b2,b1.
     a1: [x, y] 1st point on the first line
@@ -21,13 +19,12 @@ def get_2D_intersect(a1, a2, b1, b2):
         return (float('inf'), float('inf'))
     return (x/z, y/z)
 
+
 ##########
-# Testing
+# Examples
 #
-
-print( get_2D_intersect((0, 1), ( 0,  2), (1, 10), (2, 10)) )
-print( get_2D_intersect((0, 1), ( 1,  2), (0, 10), (1,  9)) )
-print( get_2D_intersect((0, 0), (10, 10), (10, 0), (0, 10)) )
-
+print(get_2d_intersection((0, 1), (0,  2), (1, 10), (2, 10)))
+print(get_2d_intersection((0, 1), (1,  2), (0, 10), (1,  9)))
+print(get_2d_intersection((0, 0), (10, 10), (10, 0), (0, 10)))
 # parallel lines so do not intersect.  Will return (inf,inf)
-print( get_2D_intersect((0, 1), (0, 2), (1, 10), (1, 9))  ) # parallel lines
+print(get_2d_intersection((0, 1), (0, 2), (1, 10), (1, 9)))  # parallel lines
